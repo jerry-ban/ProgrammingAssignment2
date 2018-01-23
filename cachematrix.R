@@ -37,9 +37,11 @@ cacheSolve <- function(x, ...) {
         warning("matrix is not inversible!")
         return
     }
-    inv <- solve(data, ...)
-    x$setinverse(inv)
-    inv
+    else{
+        inv <- solve(data, ...)
+        x$setinverse(inv)
+        inv
+    }
 }
 
 
